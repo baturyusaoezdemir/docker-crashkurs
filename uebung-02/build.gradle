@@ -23,3 +23,13 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+task sampleTask {
+	group 'Sample Task'
+	description 'Some important Description in here...'
+	doLast {
+		println '##########################\n' +
+				'Your first Task.\n' +
+				'##########################'
+	}
+}

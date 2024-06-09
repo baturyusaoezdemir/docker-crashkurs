@@ -1,0 +1,9 @@
+server.port: 8081
+
+spring:
+  jpa:
+    hibernate.ddl-auto: create
+  datasource:
+    url: jdbc:postgresql://db:5432/compose
+    username: postgres
+    password: iamgroot
