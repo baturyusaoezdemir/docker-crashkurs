@@ -2,26 +2,5 @@ version: '3.8'
 
 services:
 
-  app:
-    container_name: app
-    image: docker-crashkurs-02:latest
-    ports:
-      - "8080:8080"
-    depends_on:
-      - db
-    configs:
-    - source: application.yml
-      target: /app/application.yml
-
-  db:
-    container_name: db
-    image: postgres
-    environment:
-      - POSTGRES_PASSWORD=iamgroot
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=compose
 
 configs:
-  application.yml:
-    name: app.application.yml
-    file: ./src/main/resources/application.yml
