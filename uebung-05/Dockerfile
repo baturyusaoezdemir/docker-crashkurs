@@ -2,7 +2,7 @@ FROM maven as build
 
 COPY . /app
 WORKDIR /app
-RUN mvn clean install -DskipTests=false spring-boot:repackage
+RUN mvn clean install spring-boot:repackage
 
 
 FROM openjdk:21-jdk-slim as deploy
